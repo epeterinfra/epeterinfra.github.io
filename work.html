@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies — Emmanuel Peter</title>
+<meta name="description" content="Real infrastructure and email deliverability projects: spoofing attack response, DMARC enforcement, WordPress performance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="solid">
+  <div class="wrap head-inner">
+    <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none;">Emmanuel Peter<span class="dot">.</span></a></div>
+    <nav>
+      <a href="work.html" class="active">Work</a>
+      <a href="services.html" class="">Services</a>
+      <a href="contact.html" class="">Contact</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap page-head"><h1>Case studies</h1><p>All work below was done on live production systems. Client names withheld; every result is verifiable on request.</p></div><section id="work" class="alt">
+  <div class="wrap">
+    
+    
+    
+
+    <div class="case">
+      <h3>Stopping a live email spoofing attack</h3>
+      <span class="par-label">Problem</span>
+      <p>A corporate domain was being used in a phishing campaign. Forensics showed two separate attack routes: external spoofing of the domain, and abuse of the website's own contact forms to send mail through the server.</p>
+      <span class="par-label">What I did</span>
+      <p>Wrote a custom Exim ACL to block the external spoofing at the mail server, rerouted all website form submissions to an isolated mailbox, and reinforced reCAPTCHA across every form integration on the site.</p>
+      <div class="result">Both attack routes closed the same week. No recurrence since.</div>
+    </div>
+
+    <div class="case">
+      <h3>Email authentication across five production domains</h3>
+      <span class="par-label">Problem</span>
+      <p>A group of companies running five domains on shared infrastructure needed their email trustworthy: no spoofing, no legitimate mail landing in spam.</p>
+      <span class="par-label">What I did</span>
+      <p>Configured SPF, DKIM and DMARC on every domain and aligned them with the real sending sources: the web server, the application platform, and third-party services including Zoho and Amazon SES. Before enforcing, I analysed over 89,000 DMARC report messages covering ten weeks of traffic, confirming every legitimate sender passed and identifying which failures were genuine spoofing attempts.</p>
+      <div class="result">All five domains authenticated and under active enforcement. Spoofed mail now lands in spam or is rejected outright.</div>
+    </div>
+
+    <div class="case">
+      <h3>WordPress performance remediation</h3>
+      <span class="par-label">Problem</span>
+      <p>A corporate WordPress site scored 57 on Google PageSpeed mobile. Slow loads, heavy images, no caching strategy.</p>
+      <span class="par-label">What I did</span>
+      <p>Phase one: server-level compression and cache headers, configured through cPanel and the web server directly rather than stacking plugins. Phases two and three (image conversion to WebP and page-builder restructuring) are in progress.</p>
+      <div class="result">Mobile score 57 → 63 from phase one alone, verified in PageSpeed reports.</div>
+    </div>
+
+    <div class="case">
+      <h3>Multi-domain cPanel/WHM administration</h3>
+      <span class="par-label">Problem</span>
+      <p>Five live domains for a group of companies, one server, one administrator: me. Uptime, SSL, backups, PHP versioning and security are all a daily responsibility, not a one-off project.</p>
+      <span class="par-label">What I did</span>
+      <p>Ongoing administration through WHM: SSH and firewall hardening, SSL across all sites, scheduled backups with sensible retention, DNS management, and documentation so the setup survives without me.</p>
+      <div class="result">Five domains, 90+ business mailboxes, daily transactional mail: maintained and documented by one administrator.</div>
+    </div>
+
+    <div class="stack" aria-label="Tools and technologies">
+      <span>cPanel / WHM</span><span>Exim</span><span>DNS</span><span>SPF · DKIM · DMARC</span><span>Apache</span><span>MySQL / MariaDB</span><span>WordPress</span><span>Elementor</span><span>Linux</span><span>Fail2Ban</span>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr">2026</span> Emmanuel Peter · Abuja, Nigeria</div>
+    <div><a href="work.html">Work</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a> · <a href="https://www.linkedin.com/in/emmanuel-peter-8b58a4237" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://contra.com/emmanuel_peter_vt2arbz8" target="_blank" rel="noopener">Contra</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
