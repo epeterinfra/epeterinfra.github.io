@@ -376,3 +376,65 @@
       text-decoration:none;
     }
   }
+
+  /* case study carousel */
+  .carousel{margin-bottom:26px;}
+  .car-track{
+    display:flex;gap:22px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding-bottom:6px;
+  }
+  .car-track::-webkit-scrollbar{display:none;}
+  .car-track .case{
+    flex:0 0 100%;
+    scroll-snap-align:start;
+    margin-bottom:0;
+  }
+  .car-controls{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-top:20px;
+  }
+  .car-dots{display:flex;gap:10px;}
+  .car-dot{
+    width:11px;height:11px;border-radius:50%;
+    background:rgba(90,106,133,.3);
+    border:none;padding:0;cursor:pointer;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .car-dot.active{background:var(--green-dark);transform:scale(1.25);}
+  .car-arrows{display:flex;gap:12px;}
+  .car-btn{
+    width:46px;height:46px;border-radius:50%;
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    color:var(--heading);
+    font-size:1.1rem;cursor:pointer;
+    box-shadow:0 4px 14px rgba(16,31,61,.08);
+    transition:background .2s ease, color .2s ease, transform .2s ease;
+  }
+  .car-btn:hover{background:var(--green);color:#fff;border-color:var(--green);transform:translateY(-2px);}
+  .car-btn:disabled{opacity:.35;cursor:default;transform:none;}
+  .car-btn:disabled:hover{background:var(--card-bg);color:var(--heading);border-color:var(--line);}
+
+  /* case study cards: dark aurora treatment, scoped to the carousel */
+  .car-track .case{
+    background:
+      radial-gradient(60% 80% at 15% 10%, rgba(58,104,196,.40), transparent 62%),
+      radial-gradient(45% 60% at 90% 20%, rgba(31,168,79,.16), transparent 60%),
+      radial-gradient(55% 70% at 80% 100%, rgba(84,70,190,.24), transparent 65%),
+      linear-gradient(165deg,#101f3d 0%,#0a1730 100%);
+    border:1px solid #26375c;
+    box-shadow:0 18px 44px rgba(4,10,25,.28);
+  }
+  .car-track .case h3{color:#e8eef8;}
+  .car-track .case p{color:#c3cfe2;}
+  .car-track .case .par-label{color:#8fa3c4;}
+  .car-track .case .result{
+    background:rgba(31,168,79,.14);
+    border:1px solid rgba(31,168,79,.35);
+    color:#4cd07a;
+  }
