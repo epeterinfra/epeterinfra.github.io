@@ -94,4 +94,3 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   next.addEventListener('click', function(){ step(1); });
   update();
 })();
-Explain
