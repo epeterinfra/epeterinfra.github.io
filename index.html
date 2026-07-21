@@ -28,7 +28,7 @@
     <div>
       <div class="kicker">Web infrastructure · Abuja, Nigeria (GMT+1)</div>
       <h1>I make business email land in the inbox, and impersonating your domain <em>nearly impossible</em>.</h1>
-      <p>cPanel/WHM, DNS, email authentication, WordPress performance. This is my daily work on live production infrastructure that businesses and their customers depend on, and I take the same work freelance.</p>
+      <p>If your business emails land in spam, your website is slow, or you're worried someone could send email pretending to be your company, those are the problems I fix. I do this every day on live systems businesses depend on, and I explain it without the jargon.</p>
       <div class="btn-row">
         <a class="btn btn-green" href="services.html">See services &amp; prices</a>
         <a class="btn btn-ghost" href="work.html">Read the case studies</a>
@@ -39,14 +39,14 @@
         <span class="big">89k+</span>
         <span class="small">reports analysed</span>
       </div>
-      <div class="check-card" aria-label="Example email authentication check, all passing">
-        <div class="bar">deliverability check</div>
+      <div class="check-card" aria-label="Example email health check, all passing">
+        <div class="bar">your email, checked</div>
         <div class="body">
-          <div class="cmd">dig TXT yourdomain.com +short</div>
-          <div class="check-row"><span>SPF</span><span class="pass">PASS</span></div>
-          <div class="check-row"><span>DKIM</span><span class="pass">PASS</span></div>
-          <div class="check-row"><span>DMARC</span><span class="pass">PASS</span></div>
-          <div class="check-row"><span>Inbox placement</span><span class="pass">VERIFIED</span></div>
+          <div class="cmd">Can anyone fake your address?</div>
+          <div class="check-row"><span>Only your servers can send</span><span class="pass">PASS</span></div>
+          <div class="check-row"><span>Messages can't be tampered</span><span class="pass">PASS</span></div>
+          <div class="check-row"><span>Fakes get blocked</span><span class="pass">PASS</span></div>
+          <div class="check-row"><span>Reaches the inbox</span><span class="pass">VERIFIED</span></div>
         </div>
       </div>
     </div>
@@ -76,10 +76,33 @@
   </div>
 </section>
 
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">In plain English</div>
+    <h2>What is email spoofing, and why should you care?</h2>
+    <p class="lead-p">Email was built to be trusting. Unless your domain is set up to prove who really sent a message, anyone can send email that looks exactly like it came from you. Not a lookalike address, your actual company address. That's how fake invoices reach your customers. Three settings on your domain stop it, and this is what they do:</p>
+    <div class="plain-grid">
+      <div class="plain">
+        <h3>SPF, the guest list</h3>
+        <p>Names the mail servers allowed to send email as your company. A message from anywhere else fails the check.</p>
+      </div>
+      <div class="plain">
+        <h3>DKIM, the wax seal</h3>
+        <p>Stamps every email you send with a seal only your server can make. If someone fakes or alters the message, the seal breaks.</p>
+      </div>
+      <div class="plain">
+        <h3>DMARC, the doorman's orders</h3>
+        <p>Tells the world's mail servers what to do with fakes: block them. It also reports back who's been trying to impersonate you.</p>
+      </div>
+    </div>
+    <p class="lead-p" style="margin-top:22px;">Most small business domains have none of these, which is why impersonation scams work. Setting them up is a one-time job. If you'd like to know whether yours are in place, <a href="contact.html">send me your domain and I'll check it for free</a>.</p>
+  </div>
+</section>
+
 <footer>
   <div class="wrap foot-inner">
     <div>© <span id="yr">2026</span> Emmanuel Peter · Abuja, Nigeria</div>
-    <div><a href="work.html">Work</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a> · <a href="https://www.linkedin.com/in/epeterinfra" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://contra.com/emmanuel_peter_vt2arbz8" target="_blank" rel="noopener">Contra</a></div>
+    <div><a href="work.html">Work</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a> · <a href="https://www.linkedin.com/in/emmanuel-peter-8b58a4237" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://contra.com/emmanuel_peter_vt2arbz8" target="_blank" rel="noopener">Contra</a></div>
   </div>
 </footer>
 
