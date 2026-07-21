@@ -36,6 +36,7 @@
       <p>A corporate domain was being used in a phishing campaign. Forensics showed two separate attack routes: external spoofing of the domain, and abuse of the website's own contact forms to send mail through the server.</p>
       <span class="par-label">What I did</span>
       <p>Wrote a custom Exim ACL to block the external spoofing at the mail server, rerouted all website form submissions to an isolated mailbox, and reinforced reCAPTCHA across every form integration on the site.</p>
+      <p class="plain-line">In plain terms: criminals were sending scam emails that looked like they came from the company. I shut down both ways they were doing it.</p>
       <div class="result">Both attack routes closed the same week. No recurrence since.</div>
     </div>
 <div class="case">
@@ -44,6 +45,7 @@
       <p>A group of companies running five domains on shared infrastructure needed their email trustworthy: no spoofing, no legitimate mail landing in spam.</p>
       <span class="par-label">What I did</span>
       <p>Configured SPF, DKIM and DMARC on every domain and aligned them with the real sending sources: the web server, the application platform, and third-party services including Zoho and Amazon SES. Before enforcing, I analysed over 89,000 DMARC report messages covering ten weeks of traffic, confirming every legitimate sender passed and identifying which failures were genuine spoofing attempts.</p>
+      <p class="plain-line">In plain terms: I made sure the company's real emails reach the inbox, and fake emails pretending to be them get blocked, across all five of their businesses.</p>
       <div class="result">All five domains authenticated and under active enforcement. Spoofed mail now lands in spam or is rejected outright.</div>
     </div>
 <div class="case">
@@ -52,6 +54,7 @@
       <p>A corporate WordPress site scored 57 on Google PageSpeed mobile. Slow loads, heavy images, no caching strategy.</p>
       <span class="par-label">What I did</span>
       <p>Phase one: server-level compression and cache headers, configured through cPanel and the web server directly rather than stacking plugins. Phases two and three (image conversion to WebP and page-builder restructuring) are in progress.</p>
+      <p class="plain-line">In plain terms: their website was loading slowly on phones and losing visitors. I made it faster, with Google's own score as proof.</p>
       <div class="result">Mobile score 57 → 63 from phase one alone, verified in PageSpeed reports.</div>
     </div>
 <div class="case">
@@ -60,6 +63,7 @@
       <p>Five live domains for a group of companies, one server, one administrator: me. Uptime, SSL, backups, PHP versioning and security are all a daily responsibility, not a one-off project.</p>
       <span class="par-label">What I did</span>
       <p>Ongoing administration through WHM: SSH and firewall hardening, SSL across all sites, scheduled backups with sensible retention, DNS management, and documentation so the setup survives without me.</p>
+      <p class="plain-line">In plain terms: I'm the person keeping five companies' websites and email online, secure, and backed up, every day.</p>
       <div class="result">Five domains, 90+ business mailboxes, daily transactional mail: maintained and documented by one administrator.</div>
     </div>
       </div>
@@ -80,7 +84,7 @@
 <footer>
   <div class="wrap foot-inner">
     <div>© <span id="yr">2026</span> Emmanuel Peter · Abuja, Nigeria</div>
-    <div><a href="work.html">Work</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a> · <a href="https://www.linkedin.com/in/epeterinfra" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://contra.com/emmanuel_peter_vt2arbz8" target="_blank" rel="noopener">Contra</a></div>
+    <div><a href="work.html">Work</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a> · <a href="https://www.linkedin.com/in/emmanuel-peter-8b58a4237" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://contra.com/emmanuel_peter_vt2arbz8" target="_blank" rel="noopener">Contra</a></div>
   </div>
 </footer>
 
